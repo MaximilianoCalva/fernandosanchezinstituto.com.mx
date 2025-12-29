@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de la Biodesprogramación - Instituto Fernando Sánchez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #2563eb;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --white: #ffffff;
+            --light-gray: #f9fafb;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: var(--white);
+
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-alt {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-blue);
+            margin: 2rem 0 1rem;
+        }
+
+        /* Biography Section */
+        .bio-header {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary-blue);
+        }
+
+        .bio-dates {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .bio-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .image-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid var(--secondary-blue);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent-blue);
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: Georgia, serif;
+        }
+
+        .quote-highlight {
+            background: var(--light-blue);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Content Paragraphs */
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .content strong {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* Timeline Style */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--accent-blue);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary-blue);
+        }
+
+        .timeline-item h3 {
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-box h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .quote-box {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            .quote-highlight {
+                font-size: 1.1rem;
+                padding: 1.25rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>El sustento científico de la Biodesprogramación</h1>
+            <p class="hero-subtitle">Descubre los fundamentos de la Nueva Medicina Germánica y el legado del Dr. Ryke
+                Geerd Hamer</p>
+        </div>
+    </section>
+
+    <!-- Dr. Hamer Biography -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Dr. Ryke Geerd Hamer</h2>
+
+            <div class="bio-header">
+                <p class="bio-dates"><strong>Fecha de nacimiento:</strong> 17 de mayo de 1935, Mettmann, Alemania<br>
+                    <strong>Fallecimiento:</strong> 2 de julio de 2017, Sandefjord, Noruega
+                </p>
+                <p class="bio-intro">El Dr. Hamer (1935-2017) fue un estudiante prodigio y a la edad de 24 años ya
+                    estaba recibido de teólogo y médico. Fue desarrollando su lado creativo lo cual le permitió patentar
+                    varios inventos relacionados con la medicina.</p>
+            </div>
+
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="https://fernandosanchezinstituto.com.mx/wp-content/uploads/2021/06/1-1.jpg"
+                        alt="Dr. Ryke Geerd Hamer">
+                </div>
+                <div class="image-card">
+                    <img src="https://fernandosanchezinstituto.com.mx/wp-content/uploads/2021/06/unnamed-1.jpg"
+                        alt="Dr. Hamer trabajando">
+                </div>
+            </div>
+
+            <div class="quote-box">
+                El hecho que haya un vínculo entre la psique y la enfermedad ni es un nuevo descubrimiento, ni le
+                pertenece al Dr. Hamer.
+            </div>
+
+            <div class="content">
+                <p>A través de los milenios, la humanidad siempre ha estado al tanto, en grado más o menos consciente de
+                    que todas las enfermedades en último grado tienen origen psíquico, y esto se convirtió en un
+                    patrimonio "científico" anclado firmemente en el legado del conocimiento universal; es simplemente
+                    la medicina moderna que ha convertido a nuestro ser animado en mera bolsa llena de fórmulas
+                    químicas.</p>
+            </div>
+
+            <div class="quote-highlight">
+                "LA ENFERMEDAD ES LA SOLUCIÓN BIOLÓGICA A UN CONFLICTO EXPERIMENTANDO POR EL SER VIVO"
+            </div>
+        </div>
+    </section>
+
+    <!-- Germanic New Medicine -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">LA NUEVA MEDICINA GERMÁNICA</h2>
+
+            <div class="content">
+                <p>La Nueva Medicina Germánica se basa en los principios descritos por el Dr. Ryke Geerd Hamer sobre las
+                    leyes biológicas. Este fantástico descubrimiento permitió entender, por primera vez y en forma
+                    concreta, reproducible y probada científicamente, cómo son las reacciones del cuerpo frente a los
+                    problemas que se van presentando a lo largo de la vida.</p>
+
+                <p>El desarrollo de las leyes biológicas permite comprender la naturaleza del conflicto mediante el
+                    análisis de su expresión en el cuerpo (estas expresiones son comúnmente llamadas enfermedades para
+                    la medicina convencional). Por lo tanto, <strong>toda enfermedad es el resultado de una adaptación
+                        biológica que tiene un sentido.</strong></p>
+            </div>
+
+            <div class="info-box">
+                <h3>Principios Fundamentales</h3>
+                <p>Basándonos en estos principios, podremos entender "todas" las enfermedades a través de las leyes
+                    biológicas, quienes nos explican la fase específica que está experimentando un paciente, nos brinda
+                    una idea del conflicto vivido, permite determinar la evolución y predecir futuros acontecimientos
+                    y/o evoluciones de las enfermedades.</p>
+            </div>
+
+            <div class="image-card" style="max-width: 600px; margin: 2rem auto;">
+                <img src="https://fernandosanchezinstituto.com.mx/wp-content/uploads/2021/06/gettyimages-124086789-612x612-1.jpg"
+                    alt="Nueva Medicina Germánica">
+            </div>
+
+            <div class="content">
+                <p>La Nueva Medicina Germánica es la fuente de información que nos permite comprender la adaptación
+                    biológica ("enfermedad"), descubrir la naturaleza del conflicto que ocasionó tal adaptación,
+                    predecir la evolución y comprender que la unidad formada por nuestro cuerpo junto a nuestra mente y
+                    espíritu está participando en un proceso biológico que desea nuestra coherencia, salud y bienestar.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historical Context -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">El Descubrimiento</h2>
+
+            <div class="image-card" style="max-width: 500px; margin: 0 auto 2rem;">
+                <img src="https://fernandosanchezinstituto.com.mx/wp-content/uploads/2021/06/Dirk-Hamer-2.jpg"
+                    alt="Dirk Hamer">
+            </div>
+
+            <div class="content">
+                <p>Ryke Geerd Hamer, un doctor alemán que ejercía en Roma, Italia, recibió un llamado telefónico en
+                    medio de la noche; su hijo Dirk, de 17 años, había sido baleado durante unas vacaciones en el
+                    Mediterráneo. Tres meses más tarde Dirk murió y poco después el Dr. Hamer, quien había contado con
+                    buena salud a lo largo de su vida, se encontró totalmente abrumado por esta catástrofe; descubrió
+                    que sufría de cáncer testicular, poco tiempo después, su esposa, Sigrid Oldenburg, presentó cáncer
+                    de mama.</p>
+
+                <p>Sospechando que esto no era mera coincidencia, decidió investigar las historias personales de los
+                    pacientes de cáncer para ver si es que habían sufrido algún choque conflictivo, angustia o trauma
+                    anterior a su enfermedad. Con el tiempo y tras una exhaustiva investigación con miles de pacientes,
+                    el Dr. Hamer finalmente consiguió demostrar que la enfermedad solamente es causada por un "shock"
+                    que nos toma totalmente desprevenidos. <strong>Este último concepto es muy importante. Si de alguna
+                        forma conseguimos prepararnos para el evento chocante, evitaremos enfermarnos.</strong></p>
+            </div>
+
+            <div class="info-box">
+                <h3>Una Nueva Perspectiva</h3>
+                <p>El Dr. Hamer prefería no decir "cáncer"; más bien, es una respuesta biológica especial a una
+                    situación insólita, cuando la situación de "shock" se resuelve, el cuerpo se aísla para volver a la
+                    normalidad. Esta es una versión simplificada de los hechos.</p>
+            </div>
+
+            <h3 class="section-subtitle">El Camino de la Perseverancia</h3>
+
+            <div class="content">
+                <p>Presentó su trabajo a la universidad en Alemania de la cual era afiliado. Ellos, sin embargo, sin
+                    explorar o comprobar sus hipótesis le pidieron negar sus hallazgos; como no pudo considerar
+                    desdecirse de todo aquello que había comprobado científicamente, se rehusó y como consecuencia le
+                    fue quitada la licencia para practicar medicina. No obstante, que la universidad de Tübinger Stift
+                    fue ordenada por la corte a realizar las pruebas necesarias para comprobar la teoría, este
+                    procedimiento jamás se llevó a cabo.</p>
+
+                <p>La vida del Dr. Hamer fue un remolino de eventos desde entonces, llevando incluso a una sentencia a
+                    encarcelamiento de dieciocho meses en Alemania, que cumplió en celdas que compartía con criminales
+                    empedernidos. Gran parte de las contrariedades que sufrió, procedían del hecho que las balas que
+                    mataron a su hijo habían sido disparadas por el príncipe de Saboya, el último rey de Italia. Una
+                    situación complicada y delicada.</p>
+            </div>
+
+            <h3 class="section-subtitle">Su Legado</h3>
+
+            <div class="content">
+                <p>El Dr. Hamer creía fervientemente que los métodos utilizados para tratar el cáncer son bárbaros,
+                    crueles y totalmente innecesarios. Desde que descubriera la Nueva Medicina Germánica en 1981, el Dr.
+                    Hamer escribió varios libros sobre esta medicina y sus extraordinarios descubrimientos. Algunos de
+                    estos libros han sido ya traducidos a varios idiomas, y el trabajo continúa.</p>
+
+                <p>Muchos médicos europeos practican este sistema bajo cuerda, reconociendo su excepcional capacidad
+                    para generar diagnosis. El hecho de que la medicina "oficial" o "convencional" no dé reconocimiento
+                    oficial a este sistema, es frustrante.</p>
+
+                <p>Esperamos que los cambios a este estado sean iniciados por aquellos que, comenzando a entender la
+                    forma en que funcionan sus cuerpos, insistan en que el personal de salud y sus instituciones tomen
+                    conciencia de la nueva ciencia. El trabajo infatigable que ejecutan las terapias alternativas y los
+                    libros, tales como los que escriben el Dr. Deepak Chopra y el Dr. Andrew Weil, han contribuido
+                    enormemente a la toma de consciencia que se hace notable en el mundo, al punto que los médicos y los
+                    hospitales comienzan a darse cuenta de estos sorprendentes descubrimientos.</p>
+            </div>
+
+            <div class="quote-box">
+                Una vez que has escuchado hablar al Dr. Hamer en uno de sus seminarios, leído sus libros o consultado
+                una de sus tablas de las enfermedades, comprenderás que finalmente alguien ha establecido todos los
+                vínculos y encontrado todos los eslabones que faltaban.
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
