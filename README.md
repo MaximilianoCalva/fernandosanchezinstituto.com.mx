@@ -1,5 +1,8 @@
 # Instituto de Biodesprogramación Fernando Sánchez (IDEBIO)
 
+**Versión**: 1.1.0  
+**Última actualización**: Enero 2026
+
 Sitio web oficial del Instituto de Biodesprogramación Fernando Sánchez.
 
 ## SEO y Metadata
