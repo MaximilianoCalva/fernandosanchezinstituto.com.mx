@@ -111,6 +111,13 @@ Para actualizar el contenido del reglamento:
 
 © 2024 Instituto de Biodesprogramación Fernando Sánchez. Todos los derechos reservados.
 
-## 👤 Contacto
+## 👤 Contacto y Redes Sociales
 
-Para más información sobre el instituto, visita [fernandosanchezinstituto.com.mx](https://fernandosanchezinstituto.com.mx)
+- **Sitio Web:** [fernandosanchezinstituto.com.mx](https://fernandosanchezinstituto.com.mx)
+- **Facebook:** [Fernando Sánchez Instituto](https://facebook.com/2041338122745512)
+- **Instagram:** [@institutodebiodesprogramacion](https://instagram.com/institutodebiodesprogramacion)
+- **TikTok:** [@instituto.idebio](https://www.tiktok.com/@instituto.idebio)
+- **YouTube:** [Instituto de Biodesprogramación](https://www.youtube.com/channel/UCdwR1D4FuM1z1CLtzVtoO8Q)
+- **WhatsApp Docentes:** +52 1 33 2603 4759
+- **WhatsApp Terapeutas:** +52 1 33 3405 4655
+- **Canal WhatsApp:** [Unirse](https://whatsapp.com/channel/0029Vb6g37Z3bbV3WXetDx2J)
