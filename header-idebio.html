@@ -277,7 +277,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .mobile-toggle {
                 display: flex;
             }
@@ -547,7 +547,7 @@
         });
 
         // Mobile Dropdown Toggle
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
             const navItems = document.querySelectorAll('.nav-item');
             const dropdownItems = document.querySelectorAll('.dropdown-item');
 
@@ -578,7 +578,7 @@
 
         // Close mobile menu on window resize
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 1024) {
                 mobileToggle.classList.remove('active');
                 mainNav.classList.remove('active');
                 mobileOverlay.classList.remove('active');
