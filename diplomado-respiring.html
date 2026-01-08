@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplomado Respiring - Instituto Fernando Sánchez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #2563eb;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --white: #ffffff;
+            --light-gray: #f9fafb;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+            --border-color: #e5e7eb;
+            --success-green: #10b981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            opacity: 0.95;
+            color: #dbeafe;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--white);
+            color: var(--secondary-blue);
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: #f0f9ff;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-blue);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Module Grid */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .module-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--secondary-blue);
+            transition: transform 0.3s;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .module-header {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--secondary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Pricing Box */
+        .pricing-box {
+            background: var(--white);
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 1rem 0;
+        }
+
+        .price-period {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-role {
+            color: var(--secondary-blue);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-number {
+            font-size: 1.1rem;
+        }
+
+        .quote-block {
+            font-size: 1.5rem;
+            font-style: italic;
+            text-align: center;
+            color: var(--primary-blue);
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #e0f2fe;
+            border-radius: 15px;
+        }
+
+        /* Intro Text */
+        .intro-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <img src="https://idemab.com/wp-content/uploads/2026/01/7136diplomado-respiring_Mesa-de-trabajo-1-01.jpg"
+                alt="Diplomado Respiring"
+                style="max-width: 100%; height: auto; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <h1>Diplomado Respiring 🌬️</h1>
+            <p class="hero-subtitle">Una experiencia profunda de autoconocimiento, ciencia y respiración consciente.</p>
+            <a href="#contacto" class="btn-cta">¡Inscríbete Ahora!</a>
+        </div>
+    </header>
+
+    <!-- Sección 1: El Despertar -->
+    <section class="section">
+        <div class="container intro-text">
+            <h2 class="section-title">El Despertar</h2>
+            <p>¿Sabías que tu respiración es mucho más que un acto automático? A nivel celular, tus moléculas se
+                descomponen para liberar la energía que te sostiene en una serie de reacciones químicas complejas. Sin
+                embargo, bajo el conocimiento actual de las neurociencias, hoy sabemos que la respiración es un sistema
+                que contiene información y memorias olvidadas en tus células.</p>
+            <p>Este diplomado es un llamado a descubrir tu historia y comprender cómo puedes cambiarla si eliges
+                hacerlo.</p>
+
+            <div class="quote-block">
+                "Respirar es recordar quién eres. Cada inhalación es vida, cada exhalación es libertad."
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Para quién es -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">¿Para quién es esta experiencia?</h2>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">🧘 Terapeutas</div>
+                    <p>Que deseen integrar herramientas de respiración consciente en sus consultas para guiar a otros
+                        con mayor profundidad y efectividad.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">🌱 Buscadores de Bienestar</div>
+                    <p>Que quieran profundizar en el conocimiento del ser humano que son y reconectarse con la parte
+                        crucial de su vida: la respiración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Estructura -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Lo que vas a aprender</h2>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Dividimos este camino en <strong>13
+                    meses</strong> de conexión constante, un número elegido por su poder transformador según la
+                numerología.</p>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-header">Módulos 1-3: Fundamentos y Energías</div>
+                    <p>Desde la historia de las culturas y las leyes universales hasta la correlación energética de los
+                        chakras con tu cuerpo físico.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">Módulos 4-5: Mensaje de los Órganos</div>
+                    <p>Un viaje por tus órganos vitales, su mensaje emocional y la exploración de heridas colectivas y
+                        generacionales heredadas en tu ADN.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">Módulos 6-8: Neurobiología y Vida</div>
+                    <p>La neurobiología del sistema nervioso y un recorrido desde tu nacimiento hasta el adulto que eres
+                        hoy.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">Módulos 9-11: Práctica y Energía Vital</div>
+                    <p>Prácticas de liberación corporal, fortalecimiento y la profundidad de la energía vital (Prana) y
+                        la meditación.</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-header">Módulos 12-13: Herramientas y Clínica</div>
+                    <p>Herramientas de autoconocimiento (Arquetipos de Jung, Aromaterapia) y la metodología aplicada
+                        para la consulta clínica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4 y 5: Metodología y Calendario -->
+    <section class="section section-alt">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <!-- Metodología -->
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Metodología</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1.5rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--success-green);">✓</span>
+                            <strong>Modalidad 100% Online:</strong> Acceso a plataforma 24/7.
+                        </li>
+                        <li style="margin-bottom: 1.5rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--success-green);">✓</span>
+                            <strong>Clases en Vivo:</strong> Jueves a las 5:00 p.m. (hora Centro de México) vía Zoom.
+                        </li>
+                        <li style="margin-bottom: 1.5rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--success-green);">✓</span>
+                            <strong>Acompañamiento:</strong> Clases semanales con la maestra Paty Bens.
+                        </li>
+                        <li style="margin-bottom: 1.5rem; padding-left: 2rem; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--success-green);">✓</span>
+                            <strong>Material:</strong> Vídeos, bibliografía y descargables incluidos.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Calendario -->
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Calendario 🗓️</h2>
+                    <div
+                        style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-blue);">
+                        <p style="margin-bottom: 1rem;"><strong>Bienvenida:</strong><br> 12 de febrero de 2026<br> 5:00
+                            p.m.</p>
+                        <p><strong>Inicio de Clases:</strong><br> 12 de febrero de 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 6: Inversión -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Inversión en tu Bienestar</h2>
+            <div class="pricing-box">
+                <p class="price-period">Inscripción y Gastos Administrativos</p>
+                <div class="price-amount" style="font-size: 2rem;">$1,600 MXN</div>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+                <p class="price-period">Inversión Mensual (13 meses)</p>
+                <div class="price-amount">$3,300 MXN</div>
+                <p class="price-period">Pagos: Del 15 al 20 de cada mes</p>
+
+                <div
+                    style="margin-top: 2rem; text-align: left; background: #f9fafb; padding: 1.5rem; border-radius: 8px;">
+                    <p><strong>Métodos de Pago:</strong></p>
+                    <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Transferencia Bancaria (Banorte)</li>
+                        <li>PayPal: paypal@fernandosanchez.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 7: Contacto -->
+    <section class="section section-alt" id="contacto">
+        <div class="container">
+            <h2 class="section-title">¿Tienes dudas? ¡Contáctanos!</h2>
+            <p style="text-align: center; margin-bottom: 3rem;">Nuestro equipo está listo para apoyarte en tu
+                inscripción.</p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-role">Inscripciones</div>
+                    <div class="contact-number">+52 33 1429 0988</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-role">Administración</div>
+                    <div class="contact-name">Ana Paula Hernández</div>
+                    <div class="contact-number">+52 33 2624 3908</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-role">Atención al Alumno</div>
+                    <div class="contact-name">María de la O</div>
+                    <div class="contact-number">+52 33 2924 3805</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://wa.me/523314290988" class="btn-cta"
+                    style="background: var(--success-green); color: white;">
+                    ¡Quiero inscribirme ahora! 📲
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
