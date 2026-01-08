@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a IDEBIO</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333333;
+        }
+
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f4f6f8;
+            padding: 40px 0;
+        }
+
+        .main-table {
+            background-color: #ffffff;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #233878 0%, #2863A4 100%);
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .welcome-message {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 5px solid #233878;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-message h2 {
+            color: #233878;
+            font-size: 22px;
+            margin: 0 0 15px 0;
+        }
+
+        .welcome-message p {
+            color: #1e3a8a;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .section-title {
+            color: #233878;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2863A4;
+        }
+
+        /* Directory Table */
+        .directory-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .directory-table th {
+            background: #233878;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .directory-table td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        .directory-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .area-name {
+            color: #233878;
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .contact-name {
+            color: #2863A4;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #25D366;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 5px 10px;
+            background: rgba(37, 211, 102, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-link:hover {
+            background: rgba(37, 211, 102, 0.2);
+            transform: scale(1.05);
+        }
+
+        .info-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 25px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #856404;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #233878;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 25px 20px;
+            }
+
+            .directory-table th,
+            .directory-table td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            .header-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <table class="main-table">
+            <!-- Header -->
+            <tr>
+                <td class="header">
+                    <img src="https://fernandosanchezinstituto.com.mx/wp-content/uploads/2021/06/Recurso-3-scaled.png"
+                        alt="IDEBIO Logo" class="logo">
+                    <h1 class="header-title">¡Bienvenido a IDEBIO!</h1>
+                </td>
+            </tr>
+
+            <!-- Content -->
+            <tr>
+                <td class="content">
+                    <div class="welcome-message">
+                        <h2>🎉 ¡Felicidades por tu inscripción!</h2>
+                        <p>
+                            Hemos confirmado tu pago para el <strong>Diplomado en Biodesprogramación</strong>.
+                            Estamos emocionados de acompañarte en este viaje de transformación y crecimiento personal.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <p>
+                            <strong>📌 Próximos pasos:</strong><br>
+                            • Recibirás un correo con tus credenciales de acceso a la plataforma<br>
+                            • Revisa el calendario de sesiones en tu panel de estudiante<br>
+                            • Únete a nuestro grupo de WhatsApp para estar al día
+                        </p>
+                    </div>
+
+                    <h3 class="section-title">📞 Directorio de Contacto</h3>
+                    <p style="margin-bottom: 20px; color: #666; font-size: 14px;">
+                        Nuestro equipo está aquí para apoyarte. Contacta al área correspondiente según tu necesidad:
+                    </p>
+
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Área / Responsable</th>
+                                <th>Contacto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Administración y pagos</div>
+                                    <div style="color: #666; font-size: 12px;">Registro de pagos y documentación</div>
+                                    <div class="contact-name">Ana Paula</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213326243908" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Consultas</div>
+                                    <div style="color: #666; font-size: 12px;">Agenda tu terapia</div>
+                                    <div class="contact-name">Emily Calderon</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213321642383" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Coordinación de alumnos</div>
+                                    <div style="color: #666; font-size: 12px;">Seguimiento académico, asistencia y dudas
+                                    </div>
+                                    <div class="contact-name">Diego Cisneros</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213334054655" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Coordinación IDECF</div>
+                                    <div style="color: #666; font-size: 12px;">Inscripciones y orientación IDECF</div>
+                                    <div class="contact-name">Sandra Marmolejo</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213329357723" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Dirección académica</div>
+                                    <div style="color: #666; font-size: 12px;">Prórroga de pagos, fundación, inscripción
+                                        y docentes</div>
+                                    <div class="contact-name">Denisse Jiménez</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213326034759" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Eventos</div>
+                                    <div style="color: #666; font-size: 12px;">Eventos y BioreprogrÁMATE</div>
+                                    <div class="contact-name">María Del Rosario Salazar</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213326243893" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Inscripciones y coordinación</div>
+                                    <div style="color: #666; font-size: 12px;">Apoyo con inscripciones</div>
+                                    <div class="contact-name">Esmeralda Sandoval</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213314290988" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Medios y Sanar TV</div>
+                                    <div style="color: #666; font-size: 12px;">Dirección General de Sanar TV</div>
+                                    <div class="contact-name">Andrea Carvajal</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213314417975" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Soporte Técnico</div>
+                                    <div style="color: #666; font-size: 12px;">Ingreso a la plataforma y fallas en el
+                                        sistema</div>
+                                    <div class="contact-name">Maximiliano Calva</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213330050153" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Subdirección</div>
+                                    <div style="color: #666; font-size: 12px;">Atención de dudas, seguimiento, sesiones,
+                                        fundación</div>
+                                    <div class="contact-name">María De La O Córdova</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213329243805" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="area-name">Subdirección y procesos</div>
+                                    <div style="color: #666; font-size: 12px;">Seguimiento interno y administración
+                                        general</div>
+                                    <div class="contact-name">Mercedes Estrada</div>
+                                </td>
+                                <td>
+                                    <a href="https://wa.me/5213317621267" class="whatsapp-link" target="_blank">
+                                        💬 WhatsApp
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <p style="color: #666; font-size: 14px; line-height: 1.6;">
+                            <strong>¡Estamos aquí para ti!</strong><br>
+                            No dudes en contactarnos para cualquier duda o consulta.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+                <td class="footer">
+                    <p><strong>IDEBIO</strong></p>
+                    <p>Instituto de Biodesprogramación Fernando Sánchez</p>
+                    <p style="margin-top: 15px; font-size: 12px;">
+                        © 2025 Todos los derechos reservados
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
