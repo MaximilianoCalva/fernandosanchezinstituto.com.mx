@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características IDEBIO</title>
+    <!-- PERFORMANCE & STYLES -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-slate-800 p-4 md:p-12 font-sans">
+
+    <div class="max-w-7xl mx-auto">
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- FEATURE 1: Estudia en casa -->
+            <div
+                class="bg-slate-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+                <div
+                    class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">Estudia
+                    en casa</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Sabemos que nuestros estudiantes tienen una agenda complicada por cuestiones laborales pero tienen
+                    todo el entusiasmo de aprender cosas nuevas y capacitarse, por ello, ofrecemos programas con
+                    horarios adaptables a tu rutina.
+                </p>
+            </div>
+
+            <!-- FEATURE 2: Contenido Profesional -->
+            <div
+                class="bg-slate-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+                <div
+                    class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                        </path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-indigo-700 transition-colors">
+                    Contenido Profesional</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Brindamos las bases científicas de forma profesional para que tu aprendizaje sea integral en un
+                    ámbito seguro, además de contar con el programa más completo.
+                </p>
+            </div>
+
+            <!-- FEATURE 3: Método Fernando Sánchez -->
+            <div
+                class="bg-slate-50 rounded-3xl p-8 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-slate-100 group">
+                <div
+                    class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-emerald-700 transition-colors">Método
+                    Fernando Sánchez</h3>
+                <p class="text-slate-600 leading-relaxed">
+                    Contamos con el único y exclusivo método de aprendizaje en la aplicación de la Biodesprogramación.
+                    <br> Estudia de la mano de <strong>Fernando Sánchez</strong> quien te acompañará durante tu
+                    desarrollo profesional.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Terapeutas</title>
+    <!-- PERFORMANCE & STYLES -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        alma: {
+                            primary: '#5D8C7A', // Verde suave terapeútico
+                            secondary: '#E8F1EE', // Fondo muy claro
+                            accent: '#D4A373', // Tono tierra/madera
+                            text: '#333333',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-alma-text p-4 md:p-12 font-sans">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- THERAPISTS CARD -->
+        <div class="bg-white rounded-3xl shadow-lg border border-alma-secondary overflow-hidden relative group">
+
+            <!-- Abstract Background Decoration -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-alma-primary/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-64 h-64 bg-alma-accent/10 rounded-full blur-3xl -ml-16 -mb-16 pointer-events-none">
+            </div>
+
+            <div class="p-10 md:p-14 text-center relative z-10">
+
+                <div
+                    class="w-16 h-16 bg-alma-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md transition-transform group-hover:scale-110 duration-500">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                        </path>
+                    </svg>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-bold text-alma-primary mb-4 font-poppins">Nuestros Terapeutas</h2>
+                <div class="w-16 h-1 bg-alma-accent mx-auto rounded-full mb-8"></div>
+
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed font-poppins">
+                    Contamos con un equipo de profesionales certificados listos para acompañarte en tu proceso de
+                    sanación y crecimiento personal.
+                </p>
+
+                <a href="https://almacentrodeterapias.com" target="_blank"
+                    class="inline-flex items-center gap-2 px-8 py-4 bg-alma-primary text-white rounded-full font-bold hover:bg-alma-accent transition-all hover:shadow-lg hover:-translate-y-1 group text-lg font-poppins">
+                    Conócenos
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Bottom Accent -->
+            <div class="h-2 w-full bg-gradient-to-r from-alma-primary via-alma-accent to-alma-primary opacity-80"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

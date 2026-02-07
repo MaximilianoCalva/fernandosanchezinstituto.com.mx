@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Eventos</title>
+    <!-- PERFORMANCE & STYLES -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-slate-800 p-4 md:p-8 font-sans">
+
+    <div class="max-w-4xl mx-auto">
+
+        <!-- HEADER -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-2">Próximos Eventos</h2>
+            <div class="w-16 h-1 bg-red-600 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- BIOCONGRESO CARD -->
+        <a href="https://biocongreso.com" target="_blank"
+            class="group block bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative">
+
+            <!-- Banner Image Overlay (Optional styling if no image) -->
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-500 via-blue-600 to-red-600">
+            </div>
+
+            <div class="p-8 md:p-10 flex flex-col md:flex-row gap-8 items-center">
+
+                <!-- Date Badge -->
+                <div
+                    class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-center min-w-[100px] shrink-0 group-hover:border-blue-200 transition-colors">
+                    <span class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Mayo</span>
+                    <span class="block text-4xl font-black text-slate-800">30</span>
+                    <span class="block text-sm font-bold text-slate-400">2026</span>
+                </div>
+
+                <!-- Content -->
+                <div class="flex-1 text-center md:text-left">
+                    <div
+                        class="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
+                        Evento Destacado</div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        6º BioCongreso Internacional</h3>
+                    <p class="text-slate-600 text-lg mb-4">Sanar Emocional · Bogotá, Colombia</p>
+                    <p class="text-slate-500 text-sm italic">
+                        "El congreso que une cuerpo, emoción e historia."
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="shrink-0">
+                    <span
+                        class="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-full font-bold group-hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/10">
+                        Ver Detalles
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </span>
+                </div>
+
+            </div>
+        </a>
+
+    </div>
+
+</body>
+
+</html>
